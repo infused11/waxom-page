@@ -1,0 +1,18 @@
+=fill-to($direction, $color1, $color2)
+	@keyframes fill-to
+		0%
+		    background-image: linear-gradient($direction, $color1 1%, $color2 5%)
+		15% 
+		    background-image: linear-gradient($direction, $color1 15%, $color2 35%)
+		30% 
+		    background-image: linear-gradient($direction, $color1 25%, $color2 45%)
+		45% 
+		    background-image: linear-gradient($direction, $color1 35%, $color2 55%)
+		60% 
+		    background-image: linear-gradient($direction, $color1 45%, $color2 65%)
+		75% 
+		    background-image: linear-gradient($direction, $color1 45%, $color2 75%)
+		90% 
+		    background-image: linear-gradient($direction, $color1 45%, $color2 85%)
+		100%
+		    background-image: linear-gradient($direction, $color1 55%, $color2 95%)

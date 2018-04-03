@@ -1,0 +1,30 @@
+@import "fill-to"
+
+
++fill-to(to top, $greyish-brown-three, $reddish-grey)
+=button-view
+	border-radius: 3px
+	background-color: $reddish-grey
+	box-shadow: inset 0px -3px 0 0 $greyish-brown-three
+	font-family: 'RalewayExtraBold'
+	color: $white
+	border: none
+	&:focus
+		outline: none
+	&:active
+		text-shadow: 1px 2px 7px $black
+	&:hover
+		cursor: pointer
+		background-color: $greyish-brown-three 
+		box-shadow: inset 0px -3px 0 0 $reddish-grey
+		animation: fill-to  0.1s
+
+
+
+
+
+
+	// background-color: $greyish-brown-three
+	// box-shadow: inset 0px -3px 5px 0 $black
+		// text-shadow: 1px 2px 7px #211b19
+	

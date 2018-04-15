@@ -1,7 +1,14 @@
 $(document).ready(function () {
 
-	// ********* Main slider customize ****************
+	// ********* Main slider customize ********
 	
+	
+	if ($(window).width()<576){
+		$('#img1').attr('src', 'img/main-photo1-min.jpg');
+		$('#img2').attr('src', 'img/main-photo2-min.jpg');
+		$('#img3').attr('src', 'img/main-photo3-min.jpg');
+	}
+
 	var mySwiper = new Swiper ('.swiper-container', {
 	// Optional parameters
 
@@ -9,7 +16,7 @@ $(document).ready(function () {
 	loop: true,
 	speed: 1000,
 	// autoplay: {
-	//    delay: 5000
+	//    delay: 5000 
 	// },
 	effect: 'fade',
 	fadeEffect: {
@@ -67,15 +74,16 @@ $(document).ready(function () {
 
 	// Video
 
-	
-	$("#v-text").click(function(){
-		$('#video').get(0).play();
-		$('#v-text').hide();
-	    })
-	$('#video').click(function(){
-		this.pause();
-		$('#v-text').show();
-	})
+	if ($(window).width()>1199){
+		$("#v-text").click(function(){
+			$('#video').get(0).play();
+			$('#v-text').hide();
+		    })
+		$('#video').click(function(){
+			this.pause();
+			$('#v-text').show();
+		})
+	}
 
 	// Mobile-menu open/close
 

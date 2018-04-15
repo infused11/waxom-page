@@ -41,10 +41,20 @@ gulp.task('js', function() {
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
+	.pipe(uglify()) // Minify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browsersync.reload({ stream: true }))
 });
+
+// gulp.task('js', function() {
+// 	return gulp.src('app/js/test.js')
+// 	.pipe(concat('css/testNew.js'))
+// 	.pipe(uglify())
+// 	.pipe(gulp.dest('app/css'))
+// 	.pipe(browsersync.reload({ stream: true }))
+// });
+
+
 
 gulp.task('rsync', function() {
 	return gulp.src('app/**')
